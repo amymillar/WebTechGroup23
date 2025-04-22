@@ -86,7 +86,7 @@ const questions = {
             answers: [
                 { text: "True", correct: false },
                 { text: "False", correct: false },
-                { text: "Neither...", correct: true}
+                { text: "Neither...", correct: true }
             ]
         }
     ],
@@ -123,29 +123,31 @@ const questions = {
 };
 
 let currentQuiz = [];
+let currentQuizName = ""; // 🔧 NEW global variable
 let currentQuestionIndex = 0;
 let score = 0;
-let timerInterval;          
-let timeLeft = 30;  
+let timerInterval;
+let timeLeft = 30;
 
 const questionText = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const scoreHeader = document.getElementById("score-header");
-const timerDisplay = document.getElementById("timer");           
-const timerContainer = document.getElementById("timer-container"); 
+const timerDisplay = document.getElementById("timer");
+const timerContainer = document.getElementById("timer-container");
 
 function startQuiz(quizName) {
+    currentQuizName = quizName; // 🔧 Save quiz name globally
     currentQuiz = questions[quizName];
     currentQuestionIndex = 0;
     score = 0;
     showQuestion();
     updateScoreHeader(quizName);
 
-    if (quizName === "general") {           
+    if (quizName === "general") {
         timeLeft = 30;
         timerDisplay.textContent = timeLeft;
         timerContainer.style.display = "block";
-        startTimer(); 
+        startTimer();
     } else {
         clearInterval(timerInterval);
         timerContainer.style.display = "none";
@@ -203,7 +205,7 @@ function selectAnswer(correct) {
         alert("Wrong answer.");
     }
 
-    updateScoreHeader();
+    updateScoreHeader(currentQuizName);
     currentQuestionIndex++;
 
     if (currentQuestionIndex < currentQuiz.length) {
@@ -215,9 +217,9 @@ function selectAnswer(correct) {
 
 function showScore() {
     clearInterval(timerInterval);
-    const quizName = getQuizFromURL(); 
+    const quizName = getQuizFromURL();
     localStorage.setItem('quizScore', score);
-    
+
     new Audio("sounds/victory.mp3").play();
     setTimeout(() => {
         window.location.href = `end-quiz.html?quiz=${quizName}`;
