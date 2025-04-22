@@ -123,7 +123,7 @@ const questions = {
 };
 
 let currentQuiz = [];
-let currentQuizName = ""; // 🔧 NEW global variable
+let currentQuizName = "";
 let currentQuestionIndex = 0;
 let score = 0;
 let timerInterval;
@@ -136,7 +136,7 @@ const timerDisplay = document.getElementById("timer");
 const timerContainer = document.getElementById("timer-container");
 
 function startQuiz(quizName) {
-    currentQuizName = quizName; // 🔧 Save quiz name globally
+    currentQuizName = quizName; 
     currentQuiz = questions[quizName];
     currentQuestionIndex = 0;
     score = 0;
