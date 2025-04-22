@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Page</title>
+    <link rel="stylesheet" href="main.css"> 
+    <link rel="stylesheet" href="quiz.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="title">Quiz App</h1>
+
+        <div id="navbar-container"></div>
+
+        <div class="header">
+            <h2 id="score-header">QUIZ: SCORE: 0</h2>
+        </div>
+    </header>
+    <main>
+        <div id="timer-container" style="display: none;">
+            <h3>Time Left: <span id="timer">30</span> seconds</h3>
+        </div>
+
+        <div class="question-container">
+            <div id="question"></div>
+        </div>
+        
+        <div class="answer-container">
+            <div id="answer-buttons"></div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

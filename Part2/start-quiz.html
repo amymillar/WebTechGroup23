@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Start Quiz</title>
+    <link rel="stylesheet" href="main.css"> 
+    <link rel="stylesheet" href="quiz.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="title">Quiz App</h1>
+
+        <div id="navbar-container"></div>
+
+        <div class="header">
+            <h2 id="quiz-title">ARE YOU READY?</h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="start-end-btn">
+                <button onclick="beginQuiz()" class="btn">START QUIZ</button>
+                <button onclick="location.href='category1.html'" class="btn">Return to Category</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function getQuizFromURL() {
+          const params = new URLSearchParams(window.location.search);
+          return params.get("quiz");
+        }
+
+        function beginQuiz() {
+            const quizName = getQuizFromURL();
+            window.location.href = `quiz.html?quiz=${quizName}`;
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
