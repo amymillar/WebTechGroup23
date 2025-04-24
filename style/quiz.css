@@ -1,3 +1,6 @@
+/* Minecraft category stylesheet*/
+
+/* Main container that holds the content of the quiz */
 .quiz-container {
     text-align: center;
     width: 800px;
@@ -5,11 +8,23 @@
     margin: 40px auto;
   }
   
+/* Container for the questions text */
 .question-container {
     font-size: 30px;
     margin: 100px;
 }
-  
+
+/* Container for category buttons and quiz buttons */
+.quiz-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+/* Container that holds the answer buttons*/
 #answer-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -17,7 +32,8 @@
     width: 600px;
     margin: 0 auto;
 }
-  
+
+/* Universal Style for the main button elememts*/
 .btn {
     background-color: #3e6e91;
     color: white;
@@ -28,12 +44,14 @@
     width: 100%;
     padding: 20px;
 }
-  
+
+/* Specific style for the category and quiz selection buttons */
 .quiz-btn {
     font-size: 30px;
     border-radius: 10px;
   }
   
+/* Specific style for the buttons at the start and end pages of the quiz*/
 .start-end-btn {
     display: flex;
     flex-direction: column;  
@@ -41,27 +59,21 @@
     gap: 50px;               
     margin-top: 40px;
 }
-  
-.btn:hover, .quiz-btn:hover {
+
+/* Effects for when user hovers over buttons*/
+.btn:hover{
     background-color: #355a74;
     transform: scale(1.05);
 }
-  
+ 
+/* Style for the image options - used for the image-choice questions*/
 .image-option {
     display: block;
     width: 75%;
     border-radius: 8px;
 }
   
+/* Effects for when user hovers over the images */
 .image-option:hover {
     transform: scale(1.05);
-}
-  
-.quiz-selection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    width: 100%;
-    max-width: 800px;
-    margin: 50px auto;
 }
