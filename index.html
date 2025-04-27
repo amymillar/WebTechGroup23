@@ -3,16 +3,16 @@
 <head>
     <title>Group 23 Website</title>
     <!-- link to general css stylesheet-->
-    <link rel="stylesheet" href="../style/main.css"> 
+    <link rel="stylesheet" href="main.css"> 
     <!-- link to quiz specific css stylesheet-->
-    <link rel="stylesheet" href="../style/quiz.css"> 
+    <link rel="stylesheet" href="amy/quiz.css"> 
     <!-- Import pixel style font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <!-- Main title of the app -->
-        <h1 class="title">Quiz App</h1>
+        <h1 class="title">Gaming Quiz App</h1>
         <!-- Navigation bar placeholder (loaded using javascript)-->
         <div id="navbar-container"></div>
         <!-- Subtitle for categories page-->
@@ -22,29 +22,17 @@
     <main>
         <!-- Container where the buttons to select a category will appear-->
         <div class="quiz-selection">
-            <!-- When this button is clicked it redirects to the Minecraft Category page-->
             <button class="btn quiz-btn" 
-                onclick="goToCategory('minecraft')">Minecraft Quizzes</button>
-    
+                onclick="location.href='amy/minecraft.html'" class="btn">Minecraft Quizzes</button>
             <button class="btn quiz-btn" 
-                onclick="goToCategory('category2')">Category 2</button>
-    
+                onclick="location.href='category2.html'" class="btn">Category 2</button>
             <button class="btn quiz-btn" 
-                onclick="goToCategory('category3')">Category 3</button>
-    
+                onclick="location.href='category3.html'" class="btn">Category 3</button>
             <button class="btn quiz-btn" 
-                onclick="goToCategory('category4')">Category 4</button>
+                onclick="location.href='category4.html'" class="btn">Category 4</button>
         </div>
     </main>
-
-    <script>
-        // Function to take user to the Minecraft category page
-        function goToCategory(category) {
-            window.location.href = `pages/category1.html?quiz=${category}`;
-        }
-    </script>
-
     <!-- Load main external javascript-->
-    <script src="scripts/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

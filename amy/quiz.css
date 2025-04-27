@@ -27,7 +27,7 @@
 /* Container that holds the answer buttons*/
 #answer-buttons {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     width: 600px;
     margin: 0 auto;
@@ -37,7 +37,7 @@
 .btn {
     background-color: #3e6e91;
     color: white;
-    font-family: 'VT323', monospace;
+    font-family: "VT323", monospace;
     font-size: 18px;
     border: none;
     border-radius: 12px;
@@ -66,14 +66,14 @@
     transform: scale(1.05);
 }
  
-/* Style for the image options - used for the image-choice questions*/
-.image-option {
+/* Style for the picture options - used for the picture-choice questions*/
+.picture-option {
     display: block;
     width: 75%;
     border-radius: 8px;
 }
   
 /* Effects for when user hovers over the images */
-.image-option:hover {
+.picture-option:hover {
     transform: scale(1.05);
 }

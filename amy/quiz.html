@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Page</title>
+    <!-- Link to general CSS stylesheet-->
+    <link rel="stylesheet" href="../main.css"> 
+    <!-- Link to quiz-specific CSS stylesheet-->
+    <link rel="stylesheet" href="quiz.css"> 
+    <!-- Import pixel style font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Main title of the app -->
+        <h1 class="title">Quiz App</h1>
+        <!-- Navigation bar placeholder (loaded using javascript)-->
+        <div id="navbar-container"></div>
+        <!-- Subtitle for page to display the current score-->
+        <h2 id="quiz-info">MOB QUIZ: SCORE: 0</h2>
+    </header>
+    <main>
+        <!-- Countdown timer container for the timed quiz-->
+        <div id="timer-container">
+            <h3>Time Left: <span id="timer">30</span> seconds</h3>
+        </div>
+    
+        <!-- Question container where the question will be displayed-->
+        <div class="question-container">
+            <div id="question"></div>
+        </div>
+          
+        <!-- Container for the answer buttons -->
+        <div id="answer-buttons"></div>
+
+         <!-- End screen container shown when the quiz finishes -->
+        <div class="end-container" id="end-quiz" style="display: none;">
+            <h1>FINISHED!</h1>
+            <h2>YOUR SCORE: <span id="score">0</span></h2>
+        </div>
+
+        <div class="quiz-container">
+            <!-- End quiz buttons -->
+            <div class="start-end-btn" id="end-quiz-buttons" style="display: none;">
+                <button onclick="retryQuiz()" class="btn">Retry Quiz</button>
+                <button onclick="location.href='minecraft.html'" class="btn">Back to Category</button>
+                <button onclick="location.href='../index.html'" class="btn">Back Home</button>
+            </div>
+        </div>
+
+    </main>
+    <!-- Load Main external javascript-->
+    <script src="../main.js"></script>
+    <!-- Load Quiz external javascript-->
+    <script src="quiz.js"></script>
+</body>
+</html>

@@ -3,30 +3,28 @@
 <head>
     <title>Start Quiz</title>
      <!-- link to general css stylesheet-->
-    <link rel="stylesheet" href="../style/main.css"> 
+    <link rel="stylesheet" href="../main.css"> 
     <!-- link to quiz specific css stylesheet-->
-    <link rel="stylesheet" href="../style/quiz.css"> 
+    <link rel="stylesheet" href="quiz.css"> 
     <!-- Import pixel style font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <!-- Main title of the app -->
-        <h1 class="title">Quiz App</h1>
+        <h1 class="title"> Gaming Quiz App</h1>
         <!-- Navigation bar placeholder (loaded using javascript)-->
         <div id="navbar-container"></div>
         <!-- Subtitle for page-->
-        <h2 id="quiz-title">ARE YOU READY?</h2>
+        <h2>ARE YOU READY?</h2>
     </header>
 
     <main>
         <div class="quiz-container">
             <!-- Start and return buttons-->
             <div class="start-end-btn">
-                <!-- When start button is clicked the first question will load-->
                 <button onclick="beginQuiz()" class="btn">START QUIZ</button>
-                <!-- When Return button is clicked the user will return to the categories page-->
-                <button onclick="location.href='category1.html'" class="btn">Return to Category</button>
+                <button onclick="location.href='minecraft.html'" class="btn">Return to Category</button>
             </div>
         </div>
     </main>
@@ -34,18 +32,18 @@
     <script>
         // Function to get the quiz namer from the URL to figure out what quiz to start
         function getQuizFromURL() {
-          const params = new URLSearchParams(window.location.search);
+          var params = new URLSearchParams(window.location.search);
           return params.get("quiz");
         }
 
         // Function to start the quiz chosen by getting the selected quizzes name from the URL
         function beginQuiz() {
-            const quizName = getQuizFromURL();
+            var quizName = getQuizFromURL();
             window.location.href = `quiz.html?quiz=${quizName}`;
         }
     </script>
 
     <!-- Load main external javascript-->
-    <script src="../scripts/main.js"></script>
+    <script src="../main.js"></script>
 </body>
 </html>
