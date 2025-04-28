@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CS:GO Quiz Hub</title>
+  <link rel="stylesheet" href="../style/main.css" />
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/quiz.css" />
+  <link rel="stylesheet" href="../style/accessibility.css" />
+</head>
+<body>
+  <header>
+    <div id="navbar-container"></div>
+    <!-- <div id="accessibility-container"></div> -->
+  </header>
+
+  <main>
+    <!-- hero -->
+    <section class="hero" id="hero-container">
+      <h1>Welcome to the CS:GO Quiz Selection Hub!</h1>
+      <p>Test your knowledge with a variety of fun CS:GO quizzes!</p>
+      <button id="random-quiz-btn" class="cta-button">Start a Random Quiz</button>
+    </section>
+
+    <!-- Quiz Selection -->
+    <section id="quiz-selection-container">
+      <h1>Select a CS:GO Quiz</h1>
+      <div id="quiz-options-container">
+        <div id="quiz-options"></div>
+      </div>
+    </section>
+
+    <!-- Quiz Area -->
+    <section id="quiz-container" class="hidden">
+      <div id="question-timer"></div>
+      <h2 id="question-text"></h2>
+      <ul id="answer-list"></ul>
+      <button id="skip-button">Skip</button>
+    </section>
+
+    <!-- Results -->
+    <section id="results-container" class="hidden">
+      <h2>Your Score: <span id="score"></span></h2>
+      <button id="retry-button">Try Another Quiz</button>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <script src="../scripts/main.js" defer></script>
+  <script src="../scripts/accessibility.js" defer></script>
+  <!-- <script src="../scripts/randomQ.js" defer></script> 
+  is redundant now. should be worked on  in future for modularity-->
+  <script src="../scripts/quiz.js" defer></script>
+</body>
+</html>

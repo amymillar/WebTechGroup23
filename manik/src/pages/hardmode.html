@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hard Mode Quiz</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/quiz.css">
+</head>
+<body>
+    <aside id="sidebar-container"></aside>
+
+    <main class="quiz-container">
+        <h1 id="quiz-title">Hard Mode Quiz</h1>
+        <p id="quiz-question">Loading question...</p>
+
+        <div class="quiz-options">
+            <button class="quiz-option" onclick="submitAnswer(0)">Option 1</button>
+            <button class="quiz-option" onclick="submitAnswer(1)">Option 2</button>
+            <button class="quiz-option" onclick="submitAnswer(2)">Option 3</button>
+            <button class="quiz-option" onclick="submitAnswer(3)">Option 4</button>
+        </div>
+
+        <div class="quiz-controls">
+            <button id="skip-btn" onclick="nextQuestion()">Skip</button>
+            <button id="submit-btn">Submit</button>
+        </div>
+    </main>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/quiz.js"></script>
+</body>
+</html>

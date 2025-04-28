@@ -1,0 +1,183 @@
+📌 3. Linters (Code Quality Enforcement)
+
+Linters automatically check for coding errors and enforce consistent style.
+🔹 Setting Up ESLint (for JavaScript)
+
+    Install ESLint:
+
+npm install --save-dev eslint
+
+Initialize ESLint:
+
+    npx eslint --init
+
+    Example .eslintrc.json configuration:
+
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "double"],
+        "no-unused-vars": "warn"
+    }
+}
+
+    Run ESLint:
+
+npx eslint src/scripts/
+
+
+
+
+css Linters
+
+
+🔹 Setting Up Stylelint (for CSS)
+
+    Install Stylelint:
+
+    npm install --save-dev stylelint stylelint-config-standard
+
+    Create .stylelintrc.json configuration:
+
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "indentation": 2,
+        "color-hex-length": "short"
+    }
+}
+
+    Run Stylelint:
+
+npx stylelint "src/style/**/*.css"
+
+
+
+
+
+Setting Up ESLint in a JavaScript Project (Windows + VS Code)
+
+This guide will help you set up ESLint correctly on Windows for your JavaScript project.
+📌 Prerequisites
+
+Make sure you have the following installed:
+
+    Node.js (Latest Version) → Download Here
+    VS Code → Download Here
+    Git (Recommended for Version Control) → Download Here
+
+After installing, confirm they are installed correctly:
+
+node -v
+npm -v
+git --version
+
+Expected Output (Versions may vary):
+
+v22.14.0
+10.9.2
+git version 2.43.0
+
+📌 Step 1: Open Your Project in VS Code
+
+    Open VS Code.
+    Click File → Open Folder and select your project folder (webtechg23).
+    Open the Terminal (Ctrl + ~) and set it to Command Prompt (cmd) or PowerShell.
+
+📌 Step 2: Install ESLint Locally in the Project
+
+Run the following command inside your project folder:
+
+npm install eslint --save-dev
+
+This installs ESLint as a development dependency in your project.
+📌 Step 3: Configure ESLint
+
+ESLint requires a configuration file. You can create one automatically by running:
+
+npx eslint --init
+
+It will ask you some questions:
+
+    How would you like to use ESLint? → Choose: To check syntax and find problems
+    Which type of modules does your project use? → Choose: JavaScript modules (import/export)
+    Which framework does your project use? → Choose: None (unless using React/Vue)
+    Does your project use TypeScript? → Choose: No
+    Where does your code run? → Choose: Browser
+    What format do you want your config file to be in? → Choose: JavaScript
+
+This will generate a eslint.config.js file in your project root.
+📌 Step 4: Running ESLint
+
+To check your JavaScript files for issues, run:
+
+npx eslint src/scripts/**/*.js
+
+To automatically fix issues, run:
+
+npx eslint src/scripts/**/*.js --fix
+
+📌 Step 5: Fixing ESLint Configuration Issues
+❌ Issue: "ESLint couldn't find an eslint.config.js file"
+
+🔹 Fix: Move eslint.config.js to the root of the project (not inside .config/).
+❌ Issue: "Module type of eslint.config.js is not specified"
+
+🔹 Fix: Add "type": "module" inside package.json:
+
+{
+  "type": "module",
+  "dependencies": { ... }
+}
+
+❌ Issue: "no-unused-vars" Warnings in VS Code"
+
+🔹 Fix: Add this rule to eslint.config.js if you want to ignore unused variables during development:
+
+export default [
+  {
+    rules: {
+      "no-unused-vars": "warn"  // Change to "off" to disable
+    }
+  }
+];
+
+If you don't want to disable it, just ignore the warnings.
+📌 Step 6: Installing ESLint in VS Code for Live Linting
+
+To see errors in real-time, install the ESLint extension:
+
+    Open VS Code
+    Click Extensions (Ctrl + Shift + X)
+    Search for ESLint and install it (by Microsoft)
+    Reload VS Code
+
+Now, ESLint will highlight errors inside VS Code.
+📌 Step 7: Automatically Fix Code on Save (Optional)
+
+To automatically fix issues when you save a file, enable this setting in VS Code:
+
+    Click File → Preferences → Settings
+    Search for: "editor.codeActionsOnSave"
+    Add this to your settings:
+
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true
+}
+
+Now, ESLint will auto-fix issues every time you save a file!
+🎯 Final Test
+
+Run the following command to ensure ESLint is working:
+
+npx eslint src/scripts/**/*.js --fix
+
+If you see warnings but no errors, it's working correctly.

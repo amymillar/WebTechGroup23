@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: github-pages  # Add this line
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Upload files to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .  # or your build output folder
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

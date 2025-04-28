@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Startup Symphonies</title>
+	<!--Global Stylesheet-->
+	<link rel="stylesheet" href="../../css/style.css" />
+	<!--Specific Stylesheet-->
+	<link rel="stylesheet" href="startup-symphonies-style.css" />
+</head>
+
+<body>
+	<header>
+		<h1>Startup Symphonies</h1>
+	</header>
+	<main class="main-content">
+		<div id="quiz-container">
+		<div id="question-number" class="question-number"></div>
+		<div id="timer">Time left: <span id="time-display">15</span>s</div>
+		<div id="controls">
+		<button id="play-button" class="btn">Play Sound</button>
+		</div>
+		<div id="cards"></div>
+		</div>
+		<div id="player" style="display:none;"></div>
+	</main>
+
+	<footer>Web Techonologies Group 23 Project</footer>
+
+	<!--Loading the API first then my script because it needs a hard refresh otherwise-->
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<script type="module" src="startup-symphonies-script.js"></script>
+	
+</body>
+</html>

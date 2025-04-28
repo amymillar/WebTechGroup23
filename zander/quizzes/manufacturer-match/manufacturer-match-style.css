@@ -1,0 +1,120 @@
+/*This is practically identical to the console chronology css and was copied in from there and changed slightly so wont comment it all again*/
+
+#slots {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	margin-bottom: 40px;
+	}
+
+.slot {
+	flex: 0 0 150px;
+	width: 150px;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--primary-light);
+	border: 1px solid var(--primary-dark);
+	border-radius: 8px;
+	position: relative;
+	box-shadow: 0 2px 6px var(--primary-dark);
+	transition: transform 0.2s;
+	}
+
+.slot:hover {
+	transform: translateY(-4px);
+	}
+
+#slots .slot::before {
+	content: attr(data-manufacturer);
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--primary-light);
+	padding: 2px 6px;
+	font-size: 0.9rem;
+	border-radius: 4px;
+	border: 1px solid var(--primary-dark);
+	}
+
+#cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	margin-bottom: 40px;
+	}
+
+.card {
+	width: 120px;
+	background-color: var(--primary-light);
+	border: 1px solid var(--primary-dark);
+	border-radius: 8px;
+	box-shadow: 0 2px 6px var(--primary-dark);
+	cursor: grab;
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: transform 0.2s, box-shadow 0.2s;
+	}
+  
+.card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 4px 12px var(--primary-dark);
+	}
+
+.card img {
+	max-width: 80px;
+	max-height: 60px;
+	margin-bottom: 8px;
+	object-fit: contain;
+	user-select: none;
+	pointer-events: none;
+	}
+
+.card.correct {
+	border-color: var(--correct);
+	background-color: var(--correct);
+	}
+	
+.card.incorrect {
+	border-color: var(--incorrect);
+	background-color: var(--incorrect);
+	}
+	
+#controls {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-bottom: 40px;
+	}
+
+.btn {
+	padding: 12px 24px;
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--text-dark);
+	background-color: var(--colour-dark);
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	box-shadow: 0 2px 6px var(--primary-dark);
+	transition: background-color 0.2s, transform 0.2s;
+	}
+
+.btn:hover {
+	background-color: var(--colour-light);
+	transform: translateY(-2px);
+	}
+
+#result {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--text-dark);
+	text-align: center;
+	margin-bottom: 40px;
+	}

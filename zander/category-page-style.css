@@ -1,0 +1,56 @@
+/*2x2 grid for the category page*/
+.main-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+	padding: 2rem;
+	max-width: 800px;
+	margin: 0 auto;
+	}
+
+/*quiz card styles with hover just like the cards in the quizzes just looking different*/
+.quiz-card {
+	position: relative;
+	aspect-ratio: 1 / 1;
+	background: var(--secondary-light);
+	border-radius: 12px;
+	box-shadow: var(--primary-dark);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	transition: transform 0.3s, box-shadow 0.3s;
+	}
+
+.quiz-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--primary-dark);
+	}
+
+.quiz-card h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1.2rem;
+	color: var(--text-dark);
+	text-align: center;
+	}
+	
+.card-description {
+	margin: 0;
+	font-size: 1rem;
+	color: var(--text-dark);
+	text-align: center;
+	}
+
+a.quiz-link {
+	display: block;
+	text-decoration: none;
+	color: inherit;  
+	}
+
+a.quiz-link:link,
+a.quiz-link:visited,
+a.quiz-link:hover,
+a.quiz-link:focus {
+	text-decoration: none;
+	}

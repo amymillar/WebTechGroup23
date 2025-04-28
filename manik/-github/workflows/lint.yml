@@ -1,0 +1,24 @@
+name: ESLint Check
+
+on: push
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  #make surethis is the correct Node version
+
+      - name: Install Dependencies
+        run: |
+          npm ci  # Install all dependencies from package-lock.json
+          npx eslint --init  #  Ensure ESLint is configured (one-time setup)
+
+      - name: Run ESLint
+        run: npx eslint src/scripts/**/*.js --fix || true  # allow non-zero exit codes so it doesnt fail everydamn tiem

@@ -1,0 +1,92 @@
+/* src/style/style.css */
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+nav ul {
+    list-style: none;
+    background: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+  
+nav ul li {
+    margin: 0 15px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.accessibility-icon {
+    /* position: fixed; */
+    /* top: 50px; */
+    /* right: 50px; */
+    cursor: pointer;
+    font-size: 24px;
+    background: #ffcc00;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.hidden {
+    display: none !important; /* Ensure it hides when applied */
+}
+
+#accessibility-menu {
+    display: block; /* Default: Make sure it's visible initially */
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    padding: 50px;
+    background: #0073e6;
+    color: white;
+}
+.cta-button {
+    background: #ffcc00;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.quiz-selection-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#random-quiz-btn {
+    background: #28a745; /* nice green */
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin: 1rem auto; /* center it under the options */
+    display: block;
+  }
+  
+  #random-quiz-btn:hover {
+    background: #218838; /* darker on hover */
+  }
+  

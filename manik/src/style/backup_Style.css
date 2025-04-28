@@ -1,0 +1,225 @@
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+nav ul {
+    list-style: none;
+    background: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+  
+nav ul li {
+    margin: 0 15px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.accessibility-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.hidden {
+    display: none !important; /* Ensure it hides when applied */
+}
+
+
+
+#accessibility-menu {
+    display: block; /* Default: Make sure it's visible initially */
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    padding: 50px;
+    background: #0073e6;
+    color: white;
+}
+.cta-button {
+    background: #ffcc00;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.quiz-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.quiz-card {
+    background: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Quiz style under */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Sidebar for progress */
+.sidebar {
+    width: 20%;
+    background: #0073e6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: #ffcc00;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Quiz Layout */
+.quiz-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.quiz-option {
+    padding: 15px;
+    width: 250px;
+    font-size: 16px;
+    background: white;
+    border: 2px solid #0073e6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.quiz-option:hover {
+    background: #0073e6;
+    color: white;
+}
+
+.quiz-controls {
+    margin-top: 20px;
+}
+
+#skip-btn, #submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.correct {
+    background: #4caf50 !important;
+    color: white !important;
+}
+
+.wrong {
+    background: #e63946 !important;
+    color: white !important;
+}
+/* Quiz Layout end */
+
+/* Quiz Animations */
+
+/* Fade-in animation for questions */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.quiz-container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Button click effect */
+.quiz-option:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
+/* Correct & Wrong Animations */
+.correct {
+    background: #4caf50 !important;
+    color: white !important;
+    animation: correctFlash 0.5s ease-in-out;
+}
+
+.wrong {
+    background: #e63946 !important;
+    color: white !important;
+    animation: wrongShake 0.5s ease-in-out;
+}
+
+/* Flash animation for correct answer */
+@keyframes correctFlash {
+    0% { background: #4caf50; }
+    50% { background: #8bc34a; }
+    100% { background: #4caf50; }
+}
+
+/* Shake animation for wrong answer */
+@keyframes wrongShake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+/* Quiz Animations end */
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz Template</title>
+        <link rel="stylesheet" href="src/style.css"> <!-- change to proper dir-->>
+    </head>
+    <body>
+        <aside class="sidebar">
+            <div id="sidebar-container"></div>
+        </aside>
+
+        <main class="quiz-container">
+            <h1 id="quiz-title">Quiz Title</h1>
+            <p id="quiz-question">Loading question...</p>
+
+            <p id="timer">Time Left: <span id="time-left">10</span> sec</p>
+        
+            <div class="quiz-options">
+                <button class="quiz-option" onclick="submitAnswer(0)">Option 1</button>
+                <button class="quiz-option" onclick="submitAnswer(1)">Option 2</button>
+                <button class="quiz-option" onclick="submitAnswer(2)">Option 3</button>
+                <button class="quiz-option" onclick="submitAnswer(3)">Option 4</button>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="skip-btn" onclick="nextQuestion()">Skip</button>
+                <button id="submit-btn">Submit</button>
+            </div>
+
+            <p id="quiz-feedback"></p>
+        </main>
+
+        <script src="src/script.js" defer></script>
+        <script src="src/scripts/quiz.js" defer></script>
+    </body>
+</html>

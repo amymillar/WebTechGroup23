@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>System Speedrun</title>
+	<!--Global Stylesheet-->
+	<link rel="stylesheet" href="../../css/style.css" />
+	<!--Specific Stylesheet-->
+	<link rel="stylesheet" href="system-speedrun-style.css" />
+</head>
+
+<body>
+	<header>
+		<h1>System Speedrun</h1>
+	</header>
+
+	<!--Main Content with all the text needed-->
+	<main class="main-content">
+		<div id="speedrun-quiz">
+		<h2>Name as many consoles as you can within the time limit!</h2>
+		<div id="timer">Time left: <span id="time-display">90</span>s</div>
+		<!--User input with a placeholder to tell the user what to do and autocomplete off so no old answers pop up-->
+		<input
+		type="text"
+		id="answer-input"
+		placeholder="Type console name..."
+		autocomplete="off"
+		/>
+		<ul id="matched-list"></ul>
+		<div id="results"></div>
+		<button id="restart" class="btn" style="display: none;">Restart Quiz</button>
+		</div>
+	</main>
+
+	<script src="system-speedrun-script.js" type="module"></script>
+	<footer>Web Techonologies Group 23 Project</footer>
+</body>
+
+</html>

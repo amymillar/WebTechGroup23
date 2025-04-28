@@ -1,0 +1,23 @@
+/* Button Click Animation */
+.quiz-option {
+    transition: transform 0.1s ease-in-out;
+}
+
+.quiz-option:active {
+    transform: scale(0.95);
+}
+
+/* Fade-In Effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 23 Github Website</title>
+    <!--styles here-->>
+    <link rel="stylesheet" href="src/style/main.css">
+    <link rel="stylesheet" href="src/style/accessibility.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Website</h1>
+        <div id="navbar-container"></div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Quiz Hub!</h1>
+            <p>Test your knowledge with a variety of fun quizzes!</p>
+            <a href="#" class="cta-button" onclick="startRandomQuiz()">Start a Random Quiz</a>  <!--replace in js where index-->
+        </section>
+
+        <section class="quiz-list"> <!-- replace anchors with appropriate links when established-->
+            <div class="quiz-card"><a href="index.html">Multiple Choice</a></div>
+            <div class="quiz-card"><a href="index.html">Fill in the Blank</a></div>
+            <div class="quiz-card"><a href="index.html">Timed Quiz</a></div>
+            <div class="quiz-card"><a href="index.html">True/False</a></div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-container"></div>
+    </footer>
+
+    <!--load scripts underneith-->
+    <script src="src/scripts/main.js" defer></script>
+    <script src="src/scripts/accessibility.js" defer></script>
+</body>
+</html>

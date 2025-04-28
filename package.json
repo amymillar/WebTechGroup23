@@ -1,0 +1,6 @@
+{
+  "Type": "module",
+  "devDependencies": {
+    "eslint": "^9.22.0"
+  }
+}

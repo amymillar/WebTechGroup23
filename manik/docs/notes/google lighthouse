@@ -1,0 +1,8 @@
+📌 4. Google Lighthouse (Performance & Accessibility Testing)
+
+Lighthouse analyzes your website’s speed, SEO, and accessibility.
+🔹 Running Lighthouse in Chrome
+
+    Open Chrome DevTools (F12).
+    Go to the "Lighthouse" tab.
+    Click "Generate Report".

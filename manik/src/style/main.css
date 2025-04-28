@@ -1,0 +1,60 @@
+/* main.css */
+
+/* ─ Header + Nav ─ */
+header {
+    background-color: #333; /* full-width grey */
+    padding: 10px 0;
+    position: relative;
+    text-align: center; /* center inline nav */
+  }
+  
+  #navbar-container nav {
+    display: inline-block; /* inline so text-align:center works */
+  }
+  
+  #navbar-container nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  #navbar-container nav li {
+    margin: 0 12px;
+  }
+  
+  #navbar-container nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    display: block;
+  }
+  
+  #navbar-container nav a:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+  }
+  
+  /* ─ Footer ─ */
+  footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+  }
+  
+  /* ─ Page Reset ─ */
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+  }
+  .hidden {
+    display: none !important;
+  }
+  

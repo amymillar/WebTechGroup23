@@ -1,0 +1,44 @@
+#timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.correct {
+    background-color: #28a745;
+    color: white;
+}
+
+.incorrect {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.next-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+}
+
+.next-btn:hover {
+    background-color: #0056b3;
+}

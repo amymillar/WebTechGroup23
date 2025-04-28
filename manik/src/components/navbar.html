@@ -1,0 +1,47 @@
+<nav>
+    <ul>
+      <li><a href="../../../index.html">Home</a></li>
+      <li><a href="../pages/quiz.html">Categories</a></li>
+      <li><a href="../pages/leaderboard.html">Leaderboard</a></li>
+      <li><a href="../pages/login.html">Login</a></li>
+    </ul>
+  
+    <!--accessibility added into the nav -->
+    <div class="accessibility-wrapper">
+      <img
+        id="accessibility-toggle"
+        src="../assets/img/accessibilityIcon.png"
+        alt="Accessibility Options"
+        title="Accessibility Options"
+        class="accessibility-icon"
+        width="32"
+        height="32"
+      />
+      <div id="accessibility-menu" class="accessibility-menu hidden">
+        <h3>Accessibility</h3>
+        <label>
+          <input type="checkbox" id="toggle-contrast" />
+          Dark Mode
+        </label>
+        <label>
+          <input type="checkbox" id="toggle-text" />
+          Large Text
+        </label>
+        <label id="volume-wrapper">
+          Volume:
+          <span id="volume-value">50%</span>
+          <br />
+          <input
+            type="range"
+            id="volume-slider"
+            title="volume control - recommended 0.01"
+            aria-label="Volume Control"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.01"
+          />
+        </label>
+      </div>
+    </div>
+  </nav>

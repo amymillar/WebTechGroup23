@@ -1,0 +1,16 @@
+<!-- src/components/accessibility.html -->
+<img id="accessibility-toggle"
+     src="../assets/img/accessibilityIcon.png"
+     alt="Accessibility Options"
+     title="Accessibility Options"
+     class="accessibility-icon" />
+
+<div id="accessibility-menu" class="accessibility-menu hidden">
+  <h3>Accessibility</h3>
+  <label><input type="checkbox" id="toggle-contrast" /> High Contrast</label>
+  <label><input type="checkbox" id="toggle-text" /> Large Text</label>
+  <label>
+    Volume:
+    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" />
+  </label>
+</div>

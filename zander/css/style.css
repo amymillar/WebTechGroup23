@@ -1,0 +1,95 @@
+/*Global colours*/
+:root {
+	--primary-light: #FFFCF2;
+	--primary-dark: #252422 ;
+	--secondary-light: #CCC5B9;
+	--secondary-dark: #403D39 ;
+	--colour-light: #57B8FF;
+	--colour-dark: #3E6E91;
+	--correct: #4caf50;
+	--incorrect: #f44336;
+	--text-dark: #252422;
+	--text-light: #FFFCF2;
+	--shadow: rgba(0, 0, 0, 0.1);
+	}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	}
+
+body {
+	background-color: var(--primary-light);
+	color: var(--text-dark);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	}
+	
+/*Global header design*/
+header {
+	width: 100%;
+	background-color: var(--colour-dark);
+	color: var(--text-light);
+	padding: 20px 0 0 20px;
+	text-align: left;
+	box-shadow: 0 2px 4px var(--shadow);
+	}
+
+header h1 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	}
+	
+header h2 {
+	background: var(--colour-light)
+	color: white;
+	font-size: 1.3rem;
+	width: 100%;
+	margin: 0;   
+	padding: 30px 30px; 
+	}
+
+.main-content {
+	flex: 1;
+	width: 100%;
+	max-width: 900px;
+	padding: 0 20px;
+	}
+	
+/* Navigation bar styling */
+nav ul {
+  list-style: none;
+  background: #3e6e91;
+  display: flex;
+  font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Style for individual page links */
+nav a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 1.25rem;
+}
+
+/* Effect for when user hovers over the page links*/
+nav a:hover {
+  background: #355a74;
+}
+	
+/*Global footer design*/
+footer {
+	width: 100%;
+	background-color: var(--primary-dark);
+	color: var(--text-light);
+	text-align: center;
+	padding: 15px 0;
+	font-size: 0.75rem;
+	}

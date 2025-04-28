@@ -1,0 +1,69 @@
+/* accessibility.css */
+
+/* Container inside header */
+.accessibility-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+/* Icon */
+.accessibility-icon {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+/* Dropdown */
+.accessibility-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 100;
+  width: 180px;
+}
+
+.accessibility-menu.hidden {
+  display: none;
+}
+
+.accessibility-menu h3 {
+  margin-top: 0;
+  font-size: 1em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+}
+
+.accessibility-menu label {
+  display: block;
+  margin: 8px 0;
+  font-size: 0.9em;
+}
+
+/* High-contrast & large-text toggles */
+body.high-contrast {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+body.high-contrast .accessibility-menu {
+  background: #222 !important; /* dark charcoal background */
+  border-color: #555 !important; /* lighter charcoal border */
+  color: #fff !important; /* white txt in menu */
+}
+
+/* slider cahnge? idt this does shit icl maybe use specific IDs*/
+body.high-contrast .accessibility-menu input,
+body.high-contrast .accessibility-menu label {
+  color: #fff !important;
+}
+
+body.large-text {
+  font-size: 1.5em !important;
+}

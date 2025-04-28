@@ -1,0 +1,10 @@
+name: Initial Workflow
+
+on: push
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Do nothing
+        run: echo "This workflow does nothing"
